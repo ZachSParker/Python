@@ -39,11 +39,11 @@ students = [
     {'first_name' : 'Mark', 'last_name' : 'Guillen'},
     {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
-def iterateDictionary(students):
-    for key in students:
-        print('-',key)
-        
-iterateDictionary(students)
+# def iterateDictionary(students):
+    
+#     for key in students:
+#         print(key)
+# iterateDictionary(students)
 """iterateDictionary(students) 
 should output: (it's okay if each key-value pair ends up on 2 separate lines;
 bonus to get them to appear exactly as below!)
