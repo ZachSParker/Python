@@ -9,12 +9,14 @@ class Player:
 #     {"name":"Jason Tatum","age":24,"position":"small forward","team":"Boston Celtics"},
 #     {"name":"Kyrie Irving","age":32,"position":"Point Guard","team":"Brooklyn Nets"}
 #     ]
-# for i in range(0,len(players)):
-#     players = Player(
-#         players[i]["name"],
-#         players[i]["age"],
-#         players[i]["position"],
-#         players[i]["team"]
-#     )
+# for items in players:
+#     playerInfo = Player(
+#         items["name"],
+#         items["age"],
+#         items["position"],
+#         items["team"])
+    
+
+
 
 
