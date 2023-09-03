@@ -10,8 +10,8 @@ class BankAccount:
     def withdraw(self,amount):
         if self.user_bal > amount:
             self.user_bal -= amount
-            print(f"{self.user_name} your withdrawel has been successful")
-            print(f"have a wonderful day {self.user_name}")
+            print(f"{self.user_name} your withdrawal has been successful")
+            print(f"have a wonderful day {self.user_name} !")
         else:
             print(f"{self.user_name} you have insufficient funds!")
             input(f"{self.user_name} please enter the amount you wish to withdraw")
@@ -41,7 +41,7 @@ class User:
         self.account.withdraw(amount)
         return self
     def u_Balance(self):
-        print(f"your bank balance is:$ {self.account.user_bal}")
+        print(f"your bank balance is: ${self.account.user_bal}.00")
         return self
 user1 = User('Joseph Merdon','Farquad@aol.com',300)
 user2 = User('Freddy Needlemire','runningdownmid@gmail.com',500)
