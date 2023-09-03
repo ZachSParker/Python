@@ -20,12 +20,33 @@ class BankAccount:
         print(f"{self.user_name} your current balance is: $ {self.user_bal}")
         return self
     def yield_interest(self):
-        print(self.user_bal)
-        if self.user_bal < 0:
-            self.user_bal = self.user_bal * (1 + 0.04)
-        print(self.user_bal)
+        if self.user_bal > 0:
+            self.user_bal *= (1.00 + 0.04)
+        self.user_bal = round(self.user_bal,3)
         return self
-user1 = BankAccount('Connor Ferris','connerF@gmail.com',100)
-user2 = BankAccount('Matt Broderick','mattB@yahoo.com',150)
-user1.deposit(50).deposit(40).deposit(2).withdraw(100).yield_interest().bank_status()
-user2.deposit(10).deposit(100).withdraw(100).withdraw(10).withdraw(50).withdraw(27).yield_interest().bank_status()
+# user1 = BankAccount('Connor Ferris','connerF@gmail.com',100.00)
+# user2 = BankAccount('Matt Broderick','mattB@yahoo.com',150.00)
+# user1.deposit(50).deposit(40).deposit(2).withdraw(100).yield_interest().bank_status()
+# user2.deposit(10).deposit(100).withdraw(100).withdraw(10).withdraw(50).withdraw(27).yield_interest().bank_status()
+class User:
+    def __init__(self,name,email,bal):
+        self.account = BankAccount(user_name=name,user_email=email,user_bal=bal)
+        self.name = name
+        self.email = email
+        self._transaction = bal
+    def make_deposit(self,amount):
+        self.account.deposit(amount)
+        return self
+    def make_withdraw(self,amount):
+        self.account.withdraw(amount)
+        return self
+    def u_Balance(self):
+        print(f"your bank balance is:$ {self.account.user_bal}")
+        return self
+user1 = User('Joseph Merdon','Farquad@aol.com',300)
+user2 = User('Freddy Needlemire','runningdownmid@gmail.com',500)
+user1.make_deposit(50).make_withdraw(100).u_Balance()
+
+
+
+
